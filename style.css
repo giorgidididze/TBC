@@ -14,12 +14,22 @@ a{
     text-decoration: none;
 }
 nav{
-    background-color: #1a1e1f;
+    background-color: rgba(26, 30, 31, 1);
     color: #fff;
     display: flex;
     height: 84px;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.fixed {
+    position: fixed;
+    background-color: rgba(26, 30, 31, 0.95);
+    top: 0;
+    width: 100%;
+    z-index: 5;
 }
 nav li{
     display: inline-block;
@@ -51,7 +61,7 @@ svg{
     z-index: 1;
     position: absolute;
     right: 15%;
-    top: 14%;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
 }
@@ -60,6 +70,8 @@ svg{
 }
 #myNavbar{
     display: none;   
+    cursor: pointer;
+    position: relative;
 }
 header{
     position: relative;
