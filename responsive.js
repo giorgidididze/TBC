@@ -2,6 +2,18 @@ window.onbeforeunload = function() {
     window.scrollTo(0, 0);
 };
 
+document.addEventListener('DOMContentLoaded', function () {
+    var navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', function () {
+    if (window.scrollY > 1) {
+        navbar.classList.add('fixed');
+    } else {
+        navbar.classList.remove('fixed');
+    }
+});
+});
+
 function toggleNavbar() {
     var navbarResize = document.getElementById("navbar_main_responsive");
     navbarResize.style.display = (navbarResize.style.display === "block") ? "none" : "block";
